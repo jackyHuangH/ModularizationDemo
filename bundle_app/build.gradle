@@ -1,0 +1,69 @@
+apply plugin: 'com.android.application'
+apply plugin: 'org.greenrobot.greendao' // apply plugin
+//apply plugin: 'kotlin-android'
+//apply plugin: 'kotlin-android-extensions'//扩展插件，无需findViewById,直接引用布局文件的id即可
+//apply plugin: 'kotlin-kapt'  //kapt3插件
+
+android {
+    compileSdkVersion rootProject.ext.android.compileSdkVersion
+
+    defaultConfig {
+        applicationId "cn.jacky.modularization"
+        minSdkVersion rootProject.ext.android.minSdkVersion
+        targetSdkVersion rootProject.ext.android.targetSdkVersion
+        versionCode rootProject.ext.android.versionCode
+        versionName rootProject.ext.android.versionName
+
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+
+        // 开启multidex
+        multiDexEnabled true
+
+        //ARouter
+        javaCompileOptions {
+            annotationProcessorOptions {
+                arguments = [AROUTER_MODULE_NAME: project.getName()]
+            }
+        }
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    // 编译选项
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+
+    //解决pictureSelector rxjava版本冲突
+    packagingOptions {
+        exclude 'META-INF/rxjava.properties'
+    }
+
+}
+
+//greendao配置
+greendao {
+    schemaVersion 1
+    daoPackage 'cn.hzjdemo.hellodiary.gen'
+    targetGenDir 'src/main/java'
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+    androidTestImplementation('com.android.support.test.espresso:espresso-core:2.2.2', {
+        exclude group: 'com.android.support', module: 'support-annotations'
+    })
+    implementation rootProject.ext.dependencies["multidex"]
+    //------------组件化 依赖----------------------------------
+    if (!isModule.toBoolean()){
+        implementation rootProject.ext.dependencies["bundle_main"]
+        implementation rootProject.ext.dependencies["bundle_order"]
+    }
+}
+

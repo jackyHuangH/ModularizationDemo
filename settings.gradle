@@ -1,0 +1,4 @@
+include ':bundle_main', ':bundle_order', ':bundle_app',
+        ':module_support',
+        ':module_api',
+        ':picbrowserlib'

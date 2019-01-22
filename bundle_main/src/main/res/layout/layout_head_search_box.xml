@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="42dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:layout_marginTop="8dp"
+    android:background="@drawable/search_box_bg"
+    android:padding="6dp">
+
+    <ImageView
+        style="@style/SearchBoxImageIconStyle"
+        android:layout_alignParentLeft="true"
+        android:padding="2dp"
+        android:src="@drawable/ic_search"/>
+
+    <ImageView
+        android:id="@+id/ivScan"
+        style="@style/SearchBoxImageIconStyle"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_scan"/>
+
+    <ImageView
+        style="@style/SearchBoxImageIconStyle"
+        android:layout_toLeftOf="@id/ivScan"
+        android:src="@drawable/ic_voice"/>
+</RelativeLayout>

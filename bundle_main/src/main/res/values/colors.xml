@@ -1,0 +1,156 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#4C4C4C</color>
+    <color name="colorPrimaryDark">#4C4C4C</color>
+    <color name="colorAccent">#4C4C4C</color>
+
+    <color name="translation">#00000000</color>
+    <color name="windowBg">#ffffffff</color>
+    <color name="pureBlack">#ff000000</color>
+    <color name="themePink">#ff8585</color>
+    <color name="themeBlue">#3694c7</color>
+    <color name="lightBlack">#55000000</color>
+    <color name="lightGray">#f5f5f5</color>
+    <color name="color_abb1b6">#abb1b6</color>
+    <color name="color_232323">#232323</color>
+    <color name="color_8290AF">#8290af</color>
+
+    <!--color base-->
+    <color name="black">#000000</color>
+    <color name="black_d">#4C4C4C</color>
+    <color name="white">#FFFFFF</color>
+    <color name="gray">#888888</color>
+    <color name="gray_d">#9B9B9B</color>
+    <color name="red">#FF0000</color>
+    <color name="orange">#FFA500</color>
+    <color name="yellow">#FFFF00</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="violet">#EE82EE</color>
+
+    <color name="dark">#222423</color>
+    <color name="coolGreyTwo">#9B9B9F</color>
+    <color name="coolGreyThree">#B2B2B5</color>
+    <color name="whiteEleven">#e0e0e0</color>
+    <color name="whiteTwelve">#F7F7F7</color>
+    <color name="mango70">#B2FD9734</color>
+    <color name="orangeRed40">#66FF2828</color>
+    <color name="orangeRedTwo">#FF2828</color>
+    <color name="cloudyBlue90">#e5C7C3D9</color>
+    <color name="peach">#FFBF80</color>
+    <color name="brightSkyBlue">#2CBBF5</color>
+    <color name="dodgerBlueThree">#5A9EFC</color>
+    <color name="coolGreen">#42CD58</color>
+
+    <color name="steelGreyTwo">#7E7F83</color>
+    <color name="whiteFourteen">#F8F8F8</color>
+    <color name="darkGrey">#2D2F31</color>
+    <color name="darkGreyTwo">#252525</color>
+    <color name="sunnyYellow">#FFF21D</color>
+    <color name="pinkishGrey">#c5c5c5</color>
+    <color name="pinkishGreyTwo">#BEBEBE</color>
+    <color name="greyishThree">#a5a5a5</color>
+    <color name="greyishFour">#b8b8b8</color>
+    <color name="greyishBrownTwo">#6B5953</color>
+    <color name="brownishGreyThree">#616161</color>
+    <color name="pinkishOrange">#FF7741</color>
+    <color name="pinkishOrangeTwo">#FF6D47</color>
+    <color name="pinkishOrangeThree">#FF6F29</color>
+    <color name="mangoThree">#FAB128</color>
+    <color name="mangoFour">#FD9734</color>
+    <color name="pastelOrange">#FF964D</color>
+    <color name="whiteTen">#F4F2EF</color>
+    <color name="yellowishOrange">#FFA50F</color>
+    <color name="butterscotchTwo">#FFBF35</color>
+    <color name="butterscotchThree">#FFBC54</color>
+    <color name="charcoalGrey">#464749</color>
+    <color name="charcoalGreyTwo">#47484E</color>
+    <color name="warmGreySeven">#A2A2A2</color>
+    <color name="warmGreySix">#AEAEAE</color>
+    <color name="whiteSix">#e6e6e6</color>
+    <color name="blackSix">#191919</color>
+    <color name="whiteThirteen">#F6F6F5</color>
+    <color name="whiteFifteen">#E8E8E8</color>
+    <color name="coralThree">#EF4E4E</color>
+    <color name="lightcoralThree">#DF4E4E</color>
+
+    <color name="btn_cancel_color">#999999</color>
+    <color name="btn_confirm_color">#303F9F</color>
+
+    <color name="p1_white">#1AFFFFFF</color>
+
+    <color name="base_title_bg">#FFFFFF</color>
+    <color name="base_bg">#EDEEF0</color>
+
+    <color name="transparent">#00000000</color>
+
+    <color name="half_white">#7FFFFFFF</color>
+    <color name="third_white">#55FFFFFF</color>
+    <color name="quarter_white">#3FFFFFFF</color>
+    <color name="overlap_white">#33000000</color>
+
+    <color name="three_quarter_black">#B2000000</color>
+    <color name="half_black">#7F000000</color>
+    <color name="third_black">#55000000</color>
+    <color name="quarter_black">#30000000</color>
+    <color name="color_66000000">#66000000</color>
+    <color name="color_51000000">#51000000</color>
+
+    <color name="color_ececec">#ececec</color>
+    <color name="color_ababab">#ababab</color>
+    <color name="color_dfdfdf">#DFDFDF</color>
+    <color name="color_f1f1f1">#f1f1f1</color>
+    <color name="color_9a9a9a">#9a9a9a</color>
+    <color name="color_505050">#505050</color>
+    <color name="color_02c1e1">#02C1E1</color>
+    <color name="color_32c8ca">#32c8ca</color>
+    <color name="color_32b4ca">#32b4ca</color>
+    <color name="color_32caba">#32caba</color>
+    <color name="color_cc02c1e1">#CC02C1E1</color>
+    <color name="color_7f02c1e1">#7F02C1E1</color>
+    <color name="color_424849">#424849</color>
+    <color name="color_ccf3f9">#ccf3f9</color>
+    <color name="color_bbbbbb">#bbbbbb</color>
+    <color name="color_eeeeee">#eeeeee</color>
+    <color name="color_EDEEF0">#EDEEF0</color>
+    <color name="color_f39826">#f39826</color>
+    <color name="color_777777">#777777</color>
+
+    <color name="switch_green">#6fd865</color>
+    <color name="switch_yellow">#f39826</color>
+
+    <!-- Base background color-->
+    <color name="color_edeef0">#EDEEF0</color>
+
+    <!-- TextView warm color-->
+    <color name="color_282828">#282828</color>
+
+    <!-- TextView cool color -->
+    <color name="color_999999">#999999</color>
+
+    <!-- InputBox hint color-->
+    <color name="color_d5d5d5">#D5D5D5</color>
+    <color name="color_d3d3d3">#d3d3d3</color>
+
+    <color name="green_base">#FF00EE00</color>
+    <color name="blue_base">#0000ff</color>
+    <color name="yellow_base">#ffbb33</color>
+    <color name="red_base">#ff0000</color>
+    <color name="color_ff9a56">#ff9a56</color>
+    <color name="color_188bff">#188bff</color>
+    <color name="color_fb5656">#fb5656</color>
+    <color name="color_fb7777">#fb7777</color>
+    <color name="color_dddddd">#dddddd</color>
+    <color name="color_ffff4444">#ffff4444</color>
+    <color name="color_80e0f0">#80e0f0</color>
+    <color name="color_ccffffff">#ccffffff</color>
+    <color name="color_ffffff">#ffffff</color>
+    <color name="color_47474B">#47474B</color>
+    <color name="color_38ADFF">#38ADFF</color>
+    <color name="color_7D7D7D">#7d7d7d</color>
+
+    <!--15%透明度的白色-->
+    <color name="white15">#26ffffff</color>
+    <color name="white80">#ccffffff</color>
+    <color name="ic_default_bg_color">#33000000</color>
+</resources>

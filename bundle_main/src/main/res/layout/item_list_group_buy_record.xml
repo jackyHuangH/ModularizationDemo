@@ -1,0 +1,163 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+    <!--团购记录-->
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="100dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:paddingBottom="15dp"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp"
+            android:paddingTop="20dp">
+
+            <LinearLayout
+                android:id="@+id/ll_time"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <!--开团优惠-->
+                <TextView
+                    android:id="@+id/tv_discounts"
+                    android:layout_width="wrap_content"
+                    android:layout_height="17.5dp"
+                    android:background="@drawable/triangle_dark"
+                    android:gravity="center"
+                    android:paddingLeft="5dp"
+                    android:paddingRight="9dp"
+                    android:text="开团6.6折"
+                    android:textColor="@color/peach"
+                    android:textSize="10sp" />
+
+                <TextView
+                    android:id="@+id/tv_raid_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:text="2017.08.22 14:60"
+                    android:textColor="@color/brownishGreyThree"
+                    android:textSize="12sp" />
+            </LinearLayout>
+
+            <TextView
+                android:id="@+id/tv_raid_good_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/ll_time"
+                android:layout_marginTop="7.5dp"
+                android:ellipsize="end"
+                android:maxLines="1"
+                android:maxWidth="230dp"
+                android:text="小米电动自行车 X234型号 全自动..."
+                android:textColor="@color/dark"
+                android:textSize="14sp" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/tv_raid_good_name"
+                android:layout_marginTop="5dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/down_payment"
+                    android:textColor="@color/steelGreyTwo"
+                    android:textSize="12sp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10dp"
+                    android:text="@string/unit_rmb"
+                    android:textColor="@color/pastelOrange"
+                    android:textSize="13sp" />
+                <!--定金-->
+                <TextView
+                    android:id="@+id/tv_earnest_price"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/str_1"
+                    android:textColor="@color/pastelOrange"
+                    android:textSize="13sp" />
+            </LinearLayout>
+
+            <ImageView
+                android:id="@+id/iv_raid_good_pic"
+                android:layout_width="65dp"
+                android:layout_height="65dp"
+                android:layout_alignParentRight="true"
+                android:scaleType="centerCrop"
+                android:src="@drawable/default_no_pic" />
+        </RelativeLayout>
+
+        <ImageView
+            android:id="@+id/iv_announce_status"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentRight="true"
+            android:src="@drawable/h_not_start_group" />
+
+    </RelativeLayout>
+
+    <!--我要领奖-->
+    <RelativeLayout
+        android:id="@+id/rl_take_prize"
+        android:layout_width="match_parent"
+        android:layout_height="47dp"
+        android:visibility="gone">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignParentTop="true"
+            android:background="@color/whiteThirteen" />
+
+        <TextView
+            android:id="@+id/tv_str"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="15dp"
+            android:text="@string/take_good_address"
+            android:textColor="@color/warmGreySix"
+            android:textSize="12sp" />
+
+        <TextView
+            android:id="@+id/tv_take_good_address"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_str"
+            android:ellipsize="end"
+            android:maxLines="1"
+            android:maxWidth="200dp"
+            android:text="浙江省杭州市余杭区西大厦1幢4..."
+            android:textColor="@color/dark"
+            android:textSize="12sp" />
+
+        <Button
+            android:id="@+id/btn_take_prize_now"
+            android:layout_width="60dp"
+            android:layout_height="23dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="13dp"
+            android:layout_marginRight="15dp"
+            android:background="@drawable/bg_stroke_orange_four"
+            android:text="@string/take_prize_now"
+            android:textColor="@color/pastelOrange"
+            android:textSize="11sp" />
+    </RelativeLayout>
+</LinearLayout>

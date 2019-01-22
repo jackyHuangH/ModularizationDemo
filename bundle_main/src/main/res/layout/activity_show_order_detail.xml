@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              xmlns:app="http://schemas.android.com/apk/res-auto"
+              android:id="@+id/rootView"
+              android:layout_width="match_parent"
+              android:layout_height="match_parent"
+              android:background="@color/white"
+              android:orientation="vertical">
+
+    <com.zenchn.support.widget.TitleBar
+        android:id="@+id/title_bar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/whiteFifteen"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="15dp"
+                android:paddingLeft="15dp"
+                android:paddingRight="15dp"
+                android:paddingTop="17.5dp">
+
+                <!--晒单列表头部-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="43dp">
+
+                    <ImageView
+                        android:id="@+id/iv_order_user_head"
+                        android:layout_width="43dp"
+                        android:layout_height="43dp"
+                        android:scaleType="centerCrop"
+                        android:src="@drawable/default_no_pic"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_marginLeft="10dp"
+                        android:layout_toRightOf="@id/iv_order_user_head"
+                        android:gravity="bottom"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:id="@+id/tv_order_user_name"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:gravity="center"
+                            android:text="迪丽热巴"
+                            android:textColor="@color/blackSix"
+                            android:textSize="14sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_order_send_time"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_gravity="left"
+                            android:layout_marginTop="5dp"
+                            android:gravity="center"
+                            android:text="2017.8.18 12:40"
+                            android:textColor="@color/pinkishGreyTwo"
+                            android:textSize="11sp"/>
+                    </LinearLayout>
+
+                </RelativeLayout>
+
+                <!--评论内容-->
+                <TextView
+                    android:id="@+id/tv_order_content"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="14dp"
+                    android:text="今天我的心情挺好的，晚饭去哪儿吃呢你？我决定去吃一次咖啡糖加咖啡！ "
+                    android:textColor="@color/dark"
+                    android:textSize="14sp"/>
+
+                <!--九宫格图片-->
+                <cn.jacky.bundle_main.widgets.wechatcicleimage.MultiImageView
+                    android:id="@+id/nine_pics"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:visibility="gone"/>
+
+                <!--围观人数-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp">
+
+                    <TextView
+                        android:id="@+id/tv_order_see_num"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:drawableLeft="@drawable/list_share"
+                        android:drawablePadding="5dp"
+                        android:text="56"
+                        android:textColor="@color/coolGreyTwo"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_toRightOf="@id/tv_order_see_num"
+                        android:text="@string/person_see"
+                        android:textColor="@color/coolGreyTwo"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/bt_delete_detail"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/delete"
+                        android:textColor="@color/coolGreyTwo"
+                        android:textSize="12sp"
+                        android:visibility="gone"/>
+                </RelativeLayout>
+            </LinearLayout>
+
+        </ScrollView>
+
+        <LinearLayout
+            android:id="@+id/ll_give_praise"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_alignParentBottom="true"
+            android:layout_gravity="bottom"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:id="@+id/iv_order_has_praise"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/list_like"/>
+
+            <TextView
+                android:id="@+id/tv_detail_praise_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="5dp"
+                android:gravity="center"
+                android:text=""
+                android:textColor="@color/pastelOrange"
+                android:textSize="15sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/think_good"
+                android:textColor="@color/pastelOrange"
+                android:textSize="15sp"/>
+        </LinearLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="0.5dp"
+            android:layout_alignTop="@+id/ll_give_praise"
+            android:background="@color/whiteFifteen"/>
+    </RelativeLayout>
+</LinearLayout>

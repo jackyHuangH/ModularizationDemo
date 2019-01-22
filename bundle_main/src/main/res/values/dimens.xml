@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--首页底部tab高度-->
+    <dimen name="home_tab_height">49dp</dimen>
+    <dimen name="home_banner_height">200dp</dimen>
+    <dimen name="show_order_banner_height">150dp</dimen>
+    <dimen name="home_hot_item_height">168dp</dimen>
+    <dimen name="affiche_h">35dp</dimen>
+    <dimen name="home_quick_open_h">180dp</dimen>
+    <dimen name="home_indicator_h">44dp</dimen>
+    <dimen name="titlebar_h">45dp</dimen>
+    <dimen name="img_picker_size">80dp</dimen>
+    <dimen name="btn_text_size">16sp</dimen>
+    <dimen name="view_text_size">10sp</dimen>
+
+    <dimen name="dimen_36dp">36dp</dimen>
+    <dimen name="dimen_48dp">48dp</dimen>
+    <dimen name="dimen_64dp">64dp</dimen>
+    <dimen name="dimen_72dp">72dp</dimen>
+    <dimen name="dimen_96dp">96dp</dimen>
+    <dimen name="bezier_layout_height">190dp</dimen>
+    <dimen name="uc_head_layout_height">310dp</dimen>
+</resources>

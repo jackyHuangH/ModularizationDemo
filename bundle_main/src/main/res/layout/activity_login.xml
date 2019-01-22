@@ -1,0 +1,189 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/whiteThirteen"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_root"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.zenchn.support.widget.TitleBar
+            android:id="@+id/title_bar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical">
+
+            <android.support.design.widget.TextInputLayout
+                android:id="@+id/tvLayout_phone"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:layout_marginTop="60dp">
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:background="@null"
+                    android:drawableLeft="@drawable/login_phone"
+                    android:drawablePadding="10dp"
+                    android:hint="@string/input_phone"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textColorHint="@color/greyishFour"
+                    android:textSize="15sp"/>
+            </android.support.design.widget.TextInputLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="5dp"
+                android:background="@color/whiteEleven"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                android:layout_marginRight="25dp"
+                android:orientation="horizontal">
+
+                <android.support.design.widget.TextInputLayout
+                    android:id="@+id/tvLayout_code"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <EditText
+                        android:id="@+id/et_secure_code"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:background="@null"
+                        android:digits="@string/secure_code_type"
+                        android:drawableLeft="@drawable/login_message"
+                        android:drawablePadding="10dp"
+                        android:hint="@string/input_secure_code"
+                        android:maxLength="4"
+                        android:textColorHint="@color/greyishFour"
+                        android:textSize="15sp"/>
+                </android.support.design.widget.TextInputLayout>
+
+                <Button
+                    android:id="@+id/btn_get_code"
+                    android:layout_width="wrap_content"
+                    android:layout_height="30dp"
+                    android:layout_gravity="bottom"
+                    android:background="@drawable/bg_stroke_orange_four"
+                    android:text="@string/get_secure_code"
+                    android:textColor="@color/pastelOrange"/>
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginLeft="20dp"
+                android:layout_marginRight="20dp"
+                android:layout_marginTop="10dp"
+                android:background="@color/whiteEleven"/>
+
+
+            <Button
+                android:id="@+id/bt_login_now"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_h"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/login_bg"
+                android:gravity="center"
+                android:text="@string/login_str"
+                android:textColor="@color/black"
+                android:textSize="15sp"/>
+
+            <Button
+                android:id="@+id/bt_login_out"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_h"
+                android:layout_marginLeft="15dp"
+                android:layout_marginRight="15dp"
+                android:layout_marginTop="20dp"
+                android:background="@drawable/bg_bt_coral_four"
+                android:gravity="center"
+                android:text="@string/login_out_str"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+            <cn.jacky.bundle_main.widgets.test.SquareImageView
+                android:id="@+id/sqiv"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="12dp"
+                android:scaleType="centerCrop"/>
+
+            <LinearLayout
+                android:id="@+id/ll_share"
+                android:layout_width="match_parent"
+                android:layout_height="45dp"
+                android:layout_marginTop="34dp"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_wb_login"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_image_button"
+                        android:src="@drawable/wb_login"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_wx_login"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_image_button"
+                        android:src="@drawable/wx_login"/>
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="45dp"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <ImageView
+                        android:id="@+id/iv_qq_login"
+                        android:layout_width="45dp"
+                        android:layout_height="45dp"
+                        android:background="@drawable/bg_image_button"
+                        android:src="@drawable/qq_login"/>
+                </LinearLayout>
+            </LinearLayout>
+
+        </LinearLayout>
+    </LinearLayout>
+</ScrollView>

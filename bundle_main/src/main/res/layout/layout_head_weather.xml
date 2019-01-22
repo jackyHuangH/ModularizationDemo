@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="64dp"
+    android:layout_marginLeft="16dp"
+    android:layout_marginRight="16dp"
+    android:paddingTop="16dp">
+
+    <TextView
+        android:id="@+id/tvTemperature"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:gravity="center"
+        android:text="18°"
+        android:textColor="@color/windowBg"
+        android:textSize="36dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_centerVertical="true"
+        android:layout_marginLeft="12dp"
+        android:layout_toRightOf="@id/tvTemperature">
+
+        <TextView
+            android:id="@+id/tvPmNumber"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:text="40"
+            android:textColor="@color/windowBg"/>
+
+        <TextView
+            android:id="@+id/tvPmDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tvPmNumber"
+            android:text="空气优"
+            android:textColor="@color/windowBg"/>
+
+        <TextView
+            android:id="@+id/tvAddress"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPmNumber"
+            android:layout_marginLeft="8dp"
+            android:text="南山区"
+            android:textColor="@color/windowBg"/>
+
+        <TextView
+            android:id="@+id/tvWeather"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tvPmNumber"
+            android:layout_marginLeft="8dp"
+            android:layout_toRightOf="@id/tvAddress"
+            android:text="雷阵雨"
+            android:textColor="@color/windowBg"/>
+    </RelativeLayout>
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:layout_alignParentRight="true"
+        android:src="@drawable/ic_thunder"/>
+</RelativeLayout>

@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <FrameLayout
+        android:id="@+id/fl_home_container"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <include layout="@layout/divider_line_white11"/>
+
+    <cn.jacky.bundle_main.widgets.BottomTabView
+        android:id="@+id/bottom_tab"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/home_tab_height"
+        android:background="@color/white80" />
+
+</LinearLayout>

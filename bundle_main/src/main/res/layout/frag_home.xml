@@ -1,0 +1,227 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/fl_root"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <cn.jacky.bundle_main.widgets.ObservableScrollView
+        android:id="@+id/scrollview_home"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/whiteThirteen"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:descendantFocusability="beforeDescendants"
+            android:focusable="true"
+            android:focusableInTouchMode="true"
+            android:orientation="vertical">
+
+            <!--首页轮播图-->
+            <com.youth.banner.Banner
+                android:id="@+id/banner_home"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_banner_height"
+                app:indicator_drawable_selected="@drawable/banner_point_selected_white_ring"
+                app:indicator_drawable_unselected="@drawable/banner_point_normal_white"/>
+            <!--公告-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/affiche_h"
+                android:background="@color/white"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingLeft="15dp"
+                android:paddingRight="10dp"
+                android:visibility="visible">
+
+                <ImageView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/massage"/>
+
+                <cn.jacky.bundle_main.widgets.MarqueeView
+                    android:id="@+id/marquee_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="10.8dp"
+                    app:mvAnimDuration="1000"
+                    app:mvDirection="bottom_to_top"
+                    app:mvInterval="3000"
+                    app:mvSingleLine="true"
+                    app:mvTextColor="@color/charcoalGreyTwo"
+                    app:mvTextSize="12sp"/>
+            </LinearLayout>
+
+            <!--夺宝热门-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="16dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="9dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/hot1"
+                        android:textColor="@color/dark"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="@string/hot2"
+                        android:textColor="@color/mango70"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <!--用GridView代替-->
+                <cn.jacky.bundle_main.widgets.GridViewForScrollView
+                    android:id="@+id/gv_hot_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="8.5dp"
+                    android:layout_marginRight="15dp"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp"/>
+
+            </LinearLayout>
+
+            <!--快速开奖-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/home_quick_open_h"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="8dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/fast_group_buy"
+                        android:textColor="@color/dark"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="@string/now_str"
+                        android:textColor="@color/orangeRed40"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <!--首页横向滚动的列表-->
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_marginTop="9dp"
+                    android:scrollbars="none">
+
+                    <LinearLayout
+                        android:id="@+id/ll_home_quick_open"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:background="@color/white"
+                        android:orientation="horizontal"/>
+                </HorizontalScrollView>
+            </LinearLayout>
+
+            <!--更多推荐-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:background="@color/white"
+                android:orientation="vertical"
+                android:paddingBottom="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="17dp"
+                    android:layout_marginTop="11.5dp"
+                    android:gravity="center"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/more_introduce1"
+                        android:textColor="@color/dark"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="4dp"
+                        android:text="@string/more_introduce2"
+                        android:textColor="@color/cloudyBlue90"
+                        android:textSize="15sp"/>
+                </LinearLayout>
+
+                <!--更多推荐里,indicator+fragment 切换-->
+                <net.lucode.hackware.magicindicator.MagicIndicator
+                    android:id="@+id/magic_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_indicator_h"
+                    android:layout_marginTop="2dp"/>
+
+                <cn.jacky.bundle_main.widgets.GridViewForScrollView
+                    android:id="@+id/gv_more_introduce_home"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginLeft="15dp"
+                    android:layout_marginTop="16dp"
+                    android:layout_marginRight="15dp"
+                    android:horizontalSpacing="10dp"
+                    android:listSelector="@android:color/transparent"
+                    android:numColumns="2"
+                    android:scrollbars="none"
+                    android:verticalSpacing="10dp"/>
+
+            </LinearLayout>
+        </LinearLayout>
+    </cn.jacky.bundle_main.widgets.ObservableScrollView>
+
+    <TextView
+        android:id="@+id/title_text"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/titlebar_h"
+        android:background="@color/white"
+        android:clickable="true"
+        android:focusable="true"
+        android:gravity="center"
+        android:textColor="@color/dark"
+        android:textSize="19sp"
+        android:textStyle="bold"
+        app:layout_behavior="cc.pachira.onepurchase.behavior.TranslateBehavior"
+        tools:text="标题"/>
+
+</FrameLayout>

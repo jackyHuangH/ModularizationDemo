@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:orientation="vertical">
+
+    <View
+        android:id="@+id/top_line"
+        android:layout_width="1dp"
+        android:layout_height="6dp"
+        android:layout_marginStart="67dp"
+        android:background="@color/whiteSix"/>
+    <!--日期标签-->
+    <TextView
+        android:id="@+id/record_date_tip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:background="@drawable/triangle_dark"
+        android:gravity="center"
+        android:textColor="@color/peach"
+        android:textSize="10sp"
+        tools:text="2018-05-25"/>
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="8dp"
+        android:layout_marginStart="67dp"
+        android:background="@color/whiteSix"/>
+</LinearLayout>

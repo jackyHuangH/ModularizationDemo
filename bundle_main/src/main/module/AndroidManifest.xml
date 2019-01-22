@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+          xmlns:tools="http://schemas.android.com/tools"
+          package="cn.jacky.bundle_main">
+
+    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.CHANGE_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION"/>
+    <uses-permission android:name="android.permission.ACCESS_LOCATION_EXTRA_COMMANDS"/>
+    <uses-permission android:name="android.permission.GET_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.CAMERA"/>
+    <uses-permission android:name="android.permission.USE_CREDENTIALS"/>
+    <uses-permission android:name="android.permission.MANAGE_ACCOUNTS"/>
+    <uses-permission android:name="android.permission.AUTHENTICATE_ACCOUNTS"/>
+    <uses-permission android:name="com.android.launcher.permission.READ_SETTINGS"/>
+    <uses-permission android:name="android.permission.CHANGE_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.ACCESS_WIFI_STATE"/>
+    <uses-permission android:name="android.permission.READ_PHONE_STATE"/>
+    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
+    <uses-permission android:name="android.permission.BROADCAST_STICKY"/>
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"/>
+
+    <application
+        android:name="debug.MainApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme"
+        tools:replace="android:icon, android:theme">
+
+        <!-- 今日头条屏幕适配方案 -->
+        <meta-data
+            android:name="design_width_in_dp"
+            android:value="360"/>
+        <meta-data
+            android:name="design_height_in_dp"
+            android:value="640"/>
+
+        <activity
+            android:name=".ui.activity.SplashActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/SplashTheme">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN"/>
+
+                <category android:name="android.intent.category.LAUNCHER"/>
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".ui.activity.MainActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme">
+        </activity>
+
+        <!-- 7.0+调用相机,读取文件适配权限 -->
+        <provider
+            android:name="android.support.v4.content.FileProvider"
+            android:authorities="cn.hzjdemo.bundle_main.provider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths"/>
+        </provider>
+
+        <activity
+            android:name=".ui.activity.RaidDetailActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme">
+            <!--
+            添加外部唤醒信息
+            外部的链接形式应该就是这样的了：test://com.huangzj/xxx
+            -->
+            <intent-filter>
+                <data
+                    android:host="com.huangzj"
+                    android:scheme="test"/>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+        </activity>
+
+        <activity android:name=".ui.activity.SchemaFilterActivity">
+            <!--schema-->
+            <intent-filter>
+                <data
+                    android:host="m.aliyun.com"
+                    android:scheme="arouter"/>
+                <action android:name="android.intent.action.VIEW"/>
+
+                <category android:name="android.intent.category.DEFAULT"/>
+                <category android:name="android.intent.category.BROWSABLE"/>
+            </intent-filter>
+
+        </activity>
+
+        <activity
+            android:name=".ui.activity.JoinRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.SendOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.ShowOrderDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.ShowPictureActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.PassAnnounceActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.WebDetailActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.MyShowOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.GroupBuyRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.BuyRecordActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.UserInfoActivity"
+            android:screenOrientation="portrait"
+            android:theme="@style/MainTheme"
+            android:windowSoftInputMode="adjustResize"/>
+        <activity
+            android:name=".ui.activity.SetAddressActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.SysMessageActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.LoginActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.ConfirmOrderActivity"
+            android:screenOrientation="portrait"/>
+        <activity
+            android:name=".ui.activity.MultiSelectActivity"
+            android:screenOrientation="portrait"/>
+        <activity android:name=".ui.activity.TableActivity">
+        </activity>
+    </application>
+
+</manifest>

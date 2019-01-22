@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/ll_list_header"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <TextView
+        android:id="@android:id/text1"
+        android:layout_width="match_parent"
+        android:layout_height="50px"
+        android:visibility="visible"
+        android:background="@color/color_ccf3f9"
+        android:gravity="center"
+        android:textColor="@color/color_02c1e1"
+        android:textSize="13sp"
+        tools:text="共搜到符合条件的记录23条"/>
+</LinearLayout>

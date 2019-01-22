@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.bm.library.PhotoView
+        android:id="@+id/photoview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.zenchn.support.widget.RingProgressBar
+        android:id="@+id/pb"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_gravity="center"
+        android:visibility="visible"
+        custom:max="100"
+        custom:ringColor="@android:color/darker_gray"
+        custom:ringProgress="0"
+        custom:ringProgressColor="@color/brightSkyBlue"
+        custom:ringTextColor="@color/brightSkyBlue"
+        custom:ringTextSize="16sp"
+        custom:ringWidth="3dp"
+        custom:style="STROKE"
+        custom:textIsShow="true"/>
+</FrameLayout>

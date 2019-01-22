@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="60dp"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="40dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="15dp"
+        android:gravity="center"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/tv_record_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="right"
+            android:textColor="@color/greyishFour"
+            android:textSize="11sp"
+            android:text="12/20"/>
+
+        <TextView
+            android:id="@+id/tv_record_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/brownishGreyThree"
+            android:textSize="16sp"
+            android:text="16:30"/>
+    </LinearLayout>
+
+
+    <View
+        android:layout_width="1dp"
+        android:layout_height="match_parent"
+        android:layout_alignParentStart="true"
+        android:layout_marginStart="67dp"
+        android:background="@color/whiteSix"/>
+
+    <ImageView
+        android:id="@+id/iv_ring_record"
+        android:layout_width="10dp"
+        android:layout_height="10dp"
+        android:layout_alignParentStart="true"
+        android:layout_centerVertical="true"
+        android:layout_marginStart="62.5dp"
+        android:src="@drawable/ring_blue"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="15dp"
+        android:layout_toEndOf="@+id/iv_ring_record">
+
+        <TextView
+            android:id="@+id/tv_record_user_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:text="@string/app_name"
+            android:textColor="@color/dark"
+            android:textSize="13sp"/>
+
+        <TextView
+            android:id="@+id/tv_record_user_ip"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/tv_record_user_name"
+            android:text="上海 ip:193.195.**"
+            android:textColor="@color/steelGreyTwo"
+            android:textSize="12sp"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignBottom="@id/tv_record_user_ip"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@id/tv_record_user_ip"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/joined"
+                android:textColor="@color/mangoFour"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:id="@+id/tv_record_num"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text=""
+                android:textColor="@color/mangoFour"
+                android:textSize="12sp"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="bottom"
+                android:text="@string/unit_pour"
+                android:textColor="@color/mangoFour"
+                android:textSize="12sp"
+                android:visibility="gone"/>
+        </LinearLayout>
+    </RelativeLayout>
+
+</RelativeLayout>

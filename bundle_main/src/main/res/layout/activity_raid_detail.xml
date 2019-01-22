@@ -1,0 +1,395 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.SwipeRefreshLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/swipe_refresh_detail"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/rl_second_root"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:descendantFocusability="beforeDescendants"
+        android:focusable="true"
+        android:focusableInTouchMode="true">
+
+        <cn.jacky.bundle_main.widgets.ObservableScrollView
+            android:id="@+id/scrollview_home_detail"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/whiteThirteen"
+            android:scrollbars="none">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:descendantFocusability="beforeDescendants"
+                android:focusable="true"
+                android:focusableInTouchMode="true"
+                android:orientation="vertical">
+
+                <!--轮播图-->
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/home_banner_height">
+
+                    <com.youth.banner.Banner
+                        android:id="@+id/banner_home_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/home_banner_height"
+                        app:indicator_drawable_selected="@drawable/banner_point_selected_dark_ring"
+                        app:indicator_drawable_unselected="@drawable/banner_point_normal_dark"/>
+                    <!--左下角-->
+                    <TextView
+                        android:id="@+id/tv_home_detail_tip"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17.5dp"
+                        android:layout_alignParentLeft="true"
+                        android:layout_alignParentBottom="true"
+                        android:background="@drawable/triangle_dark"
+                        android:gravity="center"
+                        android:paddingLeft="6dp"
+                        android:text="数码宝贝"
+                        android:textColor="@color/peach"
+                        android:textSize="10sp"/>
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingLeft="15dp"
+                    android:paddingTop="17dp"
+                    android:paddingRight="15dp"
+                    android:paddingBottom="15dp">
+
+                    <!--标题-->
+                    <TextView
+                        android:id="@+id/tv_name_home_detail"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="联想 ZUK Z2 Pro手机（Z2121）尊享版 6G+128G 陶瓷白 移动联通电信4G手机 双卡双待"
+                        android:textColor="@color/dark"
+                        android:textSize="15sp"/>
+
+                    <!--预定量-->
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="10dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/full"
+                            android:textColor="@color/coolGreyTwo"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:id="@+id/tv_no_home_detail"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="7000"
+                            android:textColor="@color/coolGreyTwo"
+                            android:textSize="12sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/start_tuangou"
+                            android:textColor="@color/coolGreyTwo"
+                            android:textSize="12sp"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="1dp"
+                            android:layout_weight="1"/>
+                        <!--原价,开团后显示-->
+                        <TextView
+                            android:id="@+id/tv_origin_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:gravity="center"
+                            android:text="原价1988"
+                            android:textColor="@color/coolGreyTwo"
+                            android:textSize="12sp"
+                            android:visibility="gone"/>
+                    </LinearLayout>
+
+                    <!--投注进度-->
+                    <ProgressBar
+                        android:id="@+id/pb_home_detail"
+                        style="@style/home_more_progressbar_style"
+                        android:layout_width="match_parent"
+                        android:layout_height="4dp"
+                        android:layout_marginTop="8.5dp"
+                        android:max="100"
+                        android:progress="52"/>
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_marginTop="9.5dp"
+                        android:gravity="center_vertical"
+                        android:orientation="horizontal">
+
+                        <!--优惠信息-->
+                        <TextView
+                            android:id="@+id/tv_total_bet"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="预付定金100元,开团6.5折"
+                            android:textColor="@color/mangoFour"
+                            android:textSize="12sp"/>
+
+                        <View
+                            android:layout_width="0dp"
+                            android:layout_height="2dp"
+                            android:layout_weight="1"/>
+
+                        <!--总价值,团购价字体:19,orangeRedTwo-->
+                        <TextView
+                            android:id="@+id/tv_total_price"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="价值¥1988"
+                            android:textColor="@color/mangoFour"
+                            android:textSize="12sp"/>
+                    </LinearLayout>
+                </LinearLayout>
+
+                <!--商品详情按钮-->
+                <LinearLayout
+                    android:id="@+id/ll_good_detail"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/detail"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dp"
+                        android:text="@string/good_detail_str"
+                        android:textColor="@color/charcoalGreyTwo"
+                        android:textSize="14sp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/arrow_right"/>
+                </LinearLayout>
+
+                <!--<include layout="@layout/divider_line_white11" />-->
+                <!--往期团购按钮-->
+                <LinearLayout
+                    android:id="@+id/ll_pass_publish"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp"
+                    android:visibility="gone">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/pass"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dp"
+                        android:text="@string/pass_group_buy_str"
+                        android:textColor="@color/charcoalGreyTwo"
+                        android:textSize="14sp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/arrow_right"/>
+                </LinearLayout>
+
+                <include layout="@layout/divider_line_white11"/>
+                <!--拼团规则按钮-->
+                <LinearLayout
+                    android:id="@+id/ll_raid_rule"
+                    android:layout_width="match_parent"
+                    android:layout_height="47dp"
+                    android:background="@color/white"
+                    android:gravity="center_vertical"
+                    android:paddingLeft="15dp">
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:src="@drawable/rule"/>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="19dp"
+                        android:text="@string/group_buy_rule_str"
+                        android:textColor="@color/charcoalGreyTwo"
+                        android:textSize="14sp"/>
+
+                    <View
+                        android:layout_width="0dp"
+                        android:layout_height="2dp"
+                        android:layout_weight="1"/>
+
+                    <ImageView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginRight="16dp"
+                        android:src="@drawable/arrow_right"/>
+                </LinearLayout>
+
+                <!--参与记录-->
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="10dp"
+                    android:background="@color/white"
+                    android:orientation="vertical"
+                    android:paddingBottom="65dp">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="13.5dp"
+                        android:text="@string/join_record_str"
+                        android:textColor="@color/steelGreyTwo"
+                        android:textSize="12sp"/>
+
+                    <TextView
+                        android:id="@+id/tv_detail_record_time"
+                        android:layout_width="wrap_content"
+                        android:layout_height="17.5dp"
+                        android:layout_marginLeft="15dp"
+                        android:layout_marginTop="12.5dp"
+                        android:background="@drawable/triangle_dark"
+                        android:gravity="center"
+                        android:paddingLeft="6dp"
+                        android:text="2017-08-17"
+                        android:textColor="@color/peach"
+                        android:textSize="10sp"/>
+
+                    <!--参与记录,最多显示5条-->
+                    <LinearLayout
+                        android:id="@+id/ll_join_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"/>
+
+                    <View
+                        android:layout_width="1dp"
+                        android:layout_height="35dp"
+                        android:layout_marginLeft="67dp"
+                        android:background="@color/whiteSix"/>
+                    <!--查看所有参与记录-->
+                    <Button
+                        android:id="@+id/bt_look_all_record"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:background="@null"
+                        android:gravity="center"
+                        android:text="@string/look_all_record"
+                        android:textColor="@color/steelGreyTwo"
+                        android:textSize="13sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </cn.jacky.bundle_main.widgets.ObservableScrollView>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layout_behavior="@string/translateBehavior">
+
+            <TextView
+                android:id="@+id/title_text"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_h"
+                android:background="@color/white"
+                android:clickable="true"
+                android:focusable="true"
+                android:gravity="center"
+                android:text="@string/title_raid_detail"
+                android:textColor="@color/dark"
+                android:textSize="19sp"
+                android:textStyle="bold"/>
+
+            <ImageButton
+                android:id="@+id/ibt_back"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/titlebar_h"
+                android:layout_alignBottom="@+id/title_text"
+                android:layout_alignParentStart="true"
+                android:background="@null"
+                android:padding="10dp"
+                android:src="@drawable/ic_back_white"/>
+
+            <ImageButton
+                android:id="@+id/ibt_right"
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/titlebar_h"
+                android:layout_alignBottom="@+id/title_text"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="15dp"
+                android:background="@null"
+                android:src="@drawable/top_share_white"/>
+
+        </RelativeLayout>
+
+        <!--预约订购-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="64dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_stroke_grey"
+            android:gravity="center"
+            android:orientation="vertical"
+            android:paddingLeft="15dp"
+            android:paddingRight="15dp">
+
+            <Button
+                android:id="@+id/bt_raid_now"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/titlebar_h"
+                android:background="@drawable/bg_bt_mango_four"
+                android:gravity="center"
+                android:text="@string/book_buy"
+                android:textColor="@color/white"
+                android:textSize="15sp"/>
+
+        </LinearLayout>
+    </RelativeLayout>
+</android.support.v4.widget.SwipeRefreshLayout>

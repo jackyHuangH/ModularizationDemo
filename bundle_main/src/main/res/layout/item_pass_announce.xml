@@ -1,0 +1,57 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="100dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+    android:paddingBottom="15dp"
+    android:paddingLeft="15dp"
+    android:paddingTop="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/tv_discounts"
+            android:layout_width="wrap_content"
+            android:layout_height="17.5dp"
+            android:background="@drawable/triangle_dark"
+            android:gravity="center"
+            android:paddingLeft="5dp"
+            android:paddingRight="9dp"
+            android:text="No 20125355"
+            android:textColor="@color/peach"
+            android:textSize="10sp" />
+
+        <TextView
+            android:id="@+id/tv_publish_date"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="15dp"
+            android:text="2017.08.22 14:60"
+            android:textColor="@color/brownishGreyThree"
+            android:textSize="15sp" />
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/tv_publish_user"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="@string/app_name"
+        android:textColor="@color/dark"
+        android:textSize="16sp" />
+
+    <TextView
+        android:id="@+id/tv_publish_ip"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text="上海 ip:193.195.**"
+        android:textColor="@color/steelGreyTwo"
+        android:textSize="12sp" />
+
+</LinearLayout>
