@@ -8,7 +8,6 @@ import android.view.View;
 import android.widget.Button;
 
 import com.borax12.materialdaterangepicker.date.DatePickerDialog;
-import cn.jacky.bundle_main.di.component.AppComponent;
 import com.zenchn.support.kit.AndroidKit;
 import com.zenchn.support.widget.dialog.DialogMaster;
 
@@ -19,6 +18,7 @@ import butterknife.BindView;
 import butterknife.OnClick;
 import cn.jacky.bundle_main.R;
 import cn.jacky.bundle_main.R2;
+import cn.jacky.bundle_main.di.component.AppComponent;
 import cn.jacky.bundle_main.http.entity.CarEntity;
 import cn.jacky.bundle_main.ui.baseview.BaseActivity;
 import io.reactivex.Observable;

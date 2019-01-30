@@ -1,4 +1,5 @@
 apply plugin: 'com.android.library'
+apply plugin: 'com.jakewharton.butterknife'
 
 android {
     compileSdkVersion rootProject.ext.android.compileSdkVersion
@@ -33,7 +34,7 @@ dependencies {
     api rootProject.ext.dependencies["cardview"]
     api rootProject.ext.dependencies["appcompat-v7"]
 
-    implementation rootProject.ext.dependencies["butterknife"]
+    api rootProject.ext.dependencies["butterknife"]
     annotationProcessor rootProject.ext.dependencies["butterknife_compiler"]
     //material dialog
     api rootProject.ext.dependencies["material-dialogs"]
